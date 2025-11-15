@@ -13,7 +13,8 @@ add_subdirectory(Vendor/glfw)
 add_subdirectory(Vendor/imgui)
 
 file(GLOB_RECURSE SRC_FILES Core/*.cpp Renderer/*.cpp Editor/*.cpp Scene/*.cpp)
-list(APPEND SRC_FILES GameEngine.cpp Vendor/glad/src/glad.c Vendor/stb/stb_image.cpp)
+list(APPEND SRC_FILES GameEngine.cpp Vendor/glad/src/glad.c 
+Vendor/stb/stb_image.cpp Vendor/tiny_obj_loader/tiny_obj_loader.cpp)
 
 add_executable (CMakeTarget ${SRC_FILES})
 
@@ -27,6 +28,7 @@ target_include_directories(CMakeTarget PRIVATE
     Vendor/glad/include
     Vendor/KHR
     Vendor/stb
+    Vendor/tiny_obj_loader
 )
 
 target_link_libraries(CMakeTarget PRIVATE glfw ImGui)

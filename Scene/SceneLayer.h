@@ -8,6 +8,7 @@
 #include <Shader.h>
 #include <CameraLayer.h>
 #include <WindowLayer.h>
+#include <AssetsManager.h>
 #include <entt.hpp>  
 
 class SceneLayer : public Layer
@@ -23,6 +24,7 @@ public:
 
 private:
 	entt::registry registry;
+	AssetManager assets;
 
 	RendererLayer* renderLayer;
 	InputLayer* inputLayer;
