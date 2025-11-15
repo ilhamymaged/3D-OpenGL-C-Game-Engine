@@ -21,8 +21,9 @@ private:
     glm::vec3 right;
     float yaw;
     float pitch;
-    float speed;
+    float speed, sensitivity;
     float fov;
 
     void updateCameraVectors();
+    void processMouseMovement(float xoffset, float yoffset);
 };

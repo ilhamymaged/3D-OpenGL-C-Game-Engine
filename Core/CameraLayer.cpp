@@ -4,7 +4,7 @@
 CameraLayer::CameraLayer(InputLayer* inputLayer, glm::vec3 pos)
     : input(inputLayer), position(pos), front(0.0f, 0.0f, -1.0f),
     up(0.0f, 1.0f, 0.0f), yaw(-90.0f), pitch(0.0f),
-    speed(5.0f), fov(45.0f)
+    speed(5.0f), fov(45.0f), sensitivity(0.1f)
 {
     updateCameraVectors();
 }
@@ -23,7 +23,23 @@ void CameraLayer::onUpdate(float deltaTime) {
     if (input->isKeyPressed(GLFW_KEY_SPACE))
         position += up * velocity;
 
+    // Mouse movement
+    const auto& mouse = input->getMouse();
+    processMouseMovement(mouse.getDelta().x, mouse.getDelta().y);
+
     updateCameraVectors();
+}
+
+void CameraLayer::processMouseMovement(float xoffset, float yoffset) {
+    xoffset *= sensitivity;
+    yoffset *= sensitivity;
+
+    yaw += xoffset;
+    pitch -= yoffset; 
+
+    // Constrain pitch
+    if (pitch > 89.0f) pitch = 89.0f;
+    if (pitch < -89.0f) pitch = -89.0f;
 }
 
 glm::mat4 CameraLayer::getViewMatrix() const {
