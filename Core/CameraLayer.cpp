@@ -20,6 +20,8 @@ void CameraLayer::onUpdate(float deltaTime) {
         position -= right * velocity;
     if (input->isKeyPressed(GLFW_KEY_D))
         position += right * velocity;
+    if (input->isKeyPressed(GLFW_KEY_SPACE))
+        position += up * velocity;
 
     updateCameraVectors();
 }

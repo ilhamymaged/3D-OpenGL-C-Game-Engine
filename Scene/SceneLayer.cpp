@@ -5,16 +5,18 @@
 SceneLayer::SceneLayer(RendererLayer* renderer, InputLayer* inputLayer,
     CameraLayer* cameraLayer, WindowLayer* windowLayer)
 	:renderLayer{renderer}, inputLayer(inputLayer), cameraLayer(cameraLayer),
-    windowLayer(windowLayer), shader(nullptr)
+    windowLayer(windowLayer), assets{}, shader(nullptr)
 {}
 
 void SceneLayer::onAttach()
 {
 	shader = new Shader("cube");
+    shader->setInt(0, "diffuseTexture");
 
 	auto cube = registry.create();
+    std::shared_ptr<Model> model = assets.loadModel("backpack");
 	registry.emplace<Transform>(cube);
-	registry.emplace<Renderable>(cube, Mesh::generateBlock());
+	registry.emplace<Renderable>(cube, model);
 }
 
 void SceneLayer::onDetach()
@@ -54,7 +56,7 @@ void SceneLayer::onRender()
             model = glm::scale(model, transform.scale);
 
             shader->setMat4(model, "model");
-            renderable.mesh->render();
+            renderable.model->render();
         }
     });
 }

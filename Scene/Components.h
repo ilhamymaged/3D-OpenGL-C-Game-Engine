@@ -1,7 +1,7 @@
 #pragma once
 
 #include <glm.hpp>
-#include <Mesh.h>
+#include <Model.h>
 
 struct Transform 
 {
@@ -12,7 +12,7 @@ struct Transform
 
 struct Renderable
 {
-	std::shared_ptr<Mesh> mesh;
+    std::shared_ptr<Model> model;
 };
 
 

@@ -10,7 +10,6 @@ public:
     InputLayer(WindowLayer* windowLayer);
 
     void onUpdate(float deltaTime) override;
-
     bool isKeyPressed(int key) const;
 
 private:
