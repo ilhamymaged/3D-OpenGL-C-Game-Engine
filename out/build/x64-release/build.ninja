@@ -94,6 +94,15 @@ build CMakeFiles\CMakeTarget.dir\Core\WindowLayer.cpp.obj: CXX_COMPILER__CMakeTa
   TARGET_COMPILE_PDB = CMakeFiles\CMakeTarget.dir\
   TARGET_PDB = CMakeTarget.pdb
 
+build CMakeFiles\CMakeTarget.dir\Renderer\Mesh.cpp.obj: CXX_COMPILER__CMakeTarget_unscanned_Release C$:\dev\Engine\Renderer\Mesh.cpp || cmake_object_order_depends_target_CMakeTarget
+  DEFINES = -DIMGUI_ENABLE_DOCKING=1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++20
+  INCLUDES = -IC:\dev\Engine\Core -IC:\dev\Engine\Editor -IC:\dev\Engine\Renderer -IC:\dev\Engine\Scene -IC:\dev\Engine\Vendor\entt -IC:\dev\Engine\Vendor\glm -IC:\dev\Engine\Vendor\glad\include -IC:\dev\Engine\Vendor\KHR -IC:\dev\Engine\Vendor\stb -IC:\dev\Engine\Vendor\glfw\include -IC:\dev\Engine\Vendor\imgui -IC:\dev\Engine\Vendor\imgui\backends
+  OBJECT_DIR = CMakeFiles\CMakeTarget.dir
+  OBJECT_FILE_DIR = CMakeFiles\CMakeTarget.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\CMakeTarget.dir\
+  TARGET_PDB = CMakeTarget.pdb
+
 build CMakeFiles\CMakeTarget.dir\Renderer\RendererLayer.cpp.obj: CXX_COMPILER__CMakeTarget_unscanned_Release C$:\dev\Engine\Renderer\RendererLayer.cpp || cmake_object_order_depends_target_CMakeTarget
   DEFINES = -DIMGUI_ENABLE_DOCKING=1
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++20
@@ -104,6 +113,15 @@ build CMakeFiles\CMakeTarget.dir\Renderer\RendererLayer.cpp.obj: CXX_COMPILER__C
   TARGET_PDB = CMakeTarget.pdb
 
 build CMakeFiles\CMakeTarget.dir\Renderer\Shader.cpp.obj: CXX_COMPILER__CMakeTarget_unscanned_Release C$:\dev\Engine\Renderer\Shader.cpp || cmake_object_order_depends_target_CMakeTarget
+  DEFINES = -DIMGUI_ENABLE_DOCKING=1
+  FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++20
+  INCLUDES = -IC:\dev\Engine\Core -IC:\dev\Engine\Editor -IC:\dev\Engine\Renderer -IC:\dev\Engine\Scene -IC:\dev\Engine\Vendor\entt -IC:\dev\Engine\Vendor\glm -IC:\dev\Engine\Vendor\glad\include -IC:\dev\Engine\Vendor\KHR -IC:\dev\Engine\Vendor\stb -IC:\dev\Engine\Vendor\glfw\include -IC:\dev\Engine\Vendor\imgui -IC:\dev\Engine\Vendor\imgui\backends
+  OBJECT_DIR = CMakeFiles\CMakeTarget.dir
+  OBJECT_FILE_DIR = CMakeFiles\CMakeTarget.dir\Renderer
+  TARGET_COMPILE_PDB = CMakeFiles\CMakeTarget.dir\
+  TARGET_PDB = CMakeTarget.pdb
+
+build CMakeFiles\CMakeTarget.dir\Renderer\Texture.cpp.obj: CXX_COMPILER__CMakeTarget_unscanned_Release C$:\dev\Engine\Renderer\Texture.cpp || cmake_object_order_depends_target_CMakeTarget
   DEFINES = -DIMGUI_ENABLE_DOCKING=1
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG -std:c++20
   INCLUDES = -IC:\dev\Engine\Core -IC:\dev\Engine\Editor -IC:\dev\Engine\Renderer -IC:\dev\Engine\Scene -IC:\dev\Engine\Vendor\entt -IC:\dev\Engine\Vendor\glm -IC:\dev\Engine\Vendor\glad\include -IC:\dev\Engine\Vendor\KHR -IC:\dev\Engine\Vendor\stb -IC:\dev\Engine\Vendor\glfw\include -IC:\dev\Engine\Vendor\imgui -IC:\dev\Engine\Vendor\imgui\backends
@@ -156,7 +174,7 @@ build CMakeFiles\CMakeTarget.dir\Vendor\stb\stb_image.cpp.obj: CXX_COMPILER__CMa
 #############################################
 # Link the executable CMakeTarget.exe
 
-build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget_Release CMakeFiles\CMakeTarget.dir\Core\Application.cpp.obj CMakeFiles\CMakeTarget.dir\Core\CameraLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Core\InputLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Core\TimeLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Core\WindowLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Renderer\RendererLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Renderer\Shader.cpp.obj CMakeFiles\CMakeTarget.dir\Scene\SceneLayer.cpp.obj CMakeFiles\CMakeTarget.dir\GameEngine.cpp.obj CMakeFiles\CMakeTarget.dir\Vendor\glad\src\glad.c.obj CMakeFiles\CMakeTarget.dir\Vendor\stb\stb_image.cpp.obj | Vendor\glfw\src\glfw3.lib Vendor\imgui\ImGui.lib Vendor\glfw\src\glfw3.lib || Vendor\glfw\src\glfw3.lib Vendor\imgui\ImGui.lib
+build CMakeTarget.exe: CXX_EXECUTABLE_LINKER__CMakeTarget_Release CMakeFiles\CMakeTarget.dir\Core\Application.cpp.obj CMakeFiles\CMakeTarget.dir\Core\CameraLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Core\InputLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Core\TimeLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Core\WindowLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Renderer\Mesh.cpp.obj CMakeFiles\CMakeTarget.dir\Renderer\RendererLayer.cpp.obj CMakeFiles\CMakeTarget.dir\Renderer\Shader.cpp.obj CMakeFiles\CMakeTarget.dir\Renderer\Texture.cpp.obj CMakeFiles\CMakeTarget.dir\Scene\SceneLayer.cpp.obj CMakeFiles\CMakeTarget.dir\GameEngine.cpp.obj CMakeFiles\CMakeTarget.dir\Vendor\glad\src\glad.c.obj CMakeFiles\CMakeTarget.dir\Vendor\stb\stb_image.cpp.obj | Vendor\glfw\src\glfw3.lib Vendor\imgui\ImGui.lib Vendor\glfw\src\glfw3.lib || Vendor\glfw\src\glfw3.lib Vendor\imgui\ImGui.lib
   FLAGS = /DWIN32 /D_WINDOWS /W3 /GR /EHsc /MD /O2 /Ob2 /DNDEBUG
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = Vendor\glfw\src\glfw3.lib  Vendor\imgui\ImGui.lib  opengl32.lib  Vendor\glfw\src\glfw3.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

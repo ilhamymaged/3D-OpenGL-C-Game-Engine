@@ -6,7 +6,7 @@
 
 class CameraLayer : public Layer {
 public:
-    CameraLayer(InputLayer* input, glm::vec3 position = { 0.0f, 1.0f, 3.0f });
+    CameraLayer(InputLayer* input, glm::vec3 position = { 0.0f, 0.0f, 0.0f });
 
     void onUpdate(float deltaTime) override;
 

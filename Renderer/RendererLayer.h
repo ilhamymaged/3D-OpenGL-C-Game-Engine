@@ -16,7 +16,6 @@ public:
     void onRender() override;
     void onDetach() override;
 
-    // SceneLayer or other layers can enqueue render callbacks here
     void submit(const std::function<void()>& renderFunc);
 
 private:

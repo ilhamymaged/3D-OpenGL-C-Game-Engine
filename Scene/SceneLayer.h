@@ -6,11 +6,15 @@
 #include <InputLayer.h>
 #include <Layer.h>
 #include <Shader.h>
+#include <CameraLayer.h>
+#include <WindowLayer.h>
+#include <entt.hpp>  
 
 class SceneLayer : public Layer
 {
 public:
-	SceneLayer(RendererLayer* renderer, InputLayer* inputLayer);
+	SceneLayer(RendererLayer* renderer, InputLayer* inputLayer, 
+		CameraLayer* cameraLayer, WindowLayer* windowLayer);
 	~SceneLayer() override = default;
 	void onAttach() override;
 	void onDetach() override;
@@ -18,9 +22,11 @@ public:
 	void onRender() override;
 
 private:
+	entt::registry registry;
+
 	RendererLayer* renderLayer;
 	InputLayer* inputLayer;
-	GLuint VAO, VBO, EBO;
+	WindowLayer* windowLayer;
+	CameraLayer* cameraLayer;
 	Shader* shader;
-	glm::vec3 offset;
 };

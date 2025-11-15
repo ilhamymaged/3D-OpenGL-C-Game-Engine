@@ -40,3 +40,4 @@ void RendererLayer::onDetach() {
 void RendererLayer::submit(const std::function<void()>& renderFunc) {
     renderQueue.push_back(renderFunc);
 }
+

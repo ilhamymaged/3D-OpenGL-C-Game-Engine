@@ -9,6 +9,7 @@ class TimeLayer;
 class InputLayer;
 class RendererLayer;
 class SceneLayer;
+class CameraLayer;
 
 class Application {
 public:
@@ -21,10 +22,10 @@ public:
 private:
     std::vector<Layer*> layers;
 
-    // Core layers
     WindowLayer* windowLayer;
     TimeLayer* timeLayer;
     InputLayer* inputLayer;
 	RendererLayer* rendererLayer;
 	SceneLayer* sceneLayer;
+	CameraLayer* cameraLayer;
 };

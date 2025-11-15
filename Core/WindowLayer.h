@@ -16,6 +16,9 @@ public:
     GLFWwindow* getWindow() const { return window; }
     bool shouldClose() const;
 
+	inline int getWidth() const { return width; }
+	inline int getHeight() const { return height; }
+
     void close();
 
 

@@ -3,6 +3,7 @@
 #include <TimeLayer.h>
 #include <InputLayer.h>
 #include <RendererLayer.h>
+#include <CameraLayer.h>
 #include <SceneLayer.h>
 
 Application::Application(const std::string& title, int width, int height) 
@@ -11,11 +12,13 @@ Application::Application(const std::string& title, int width, int height)
     timeLayer = new TimeLayer();
     inputLayer = new InputLayer(windowLayer);
 	rendererLayer = new RendererLayer();
-	sceneLayer = new SceneLayer(rendererLayer, inputLayer); 
+	cameraLayer = new CameraLayer(inputLayer);
+	sceneLayer = new SceneLayer(rendererLayer, inputLayer, cameraLayer, windowLayer); 
 
     pushLayer(timeLayer);
     pushLayer(windowLayer);
     pushLayer(inputLayer);
+	pushLayer(cameraLayer);
 	pushLayer(rendererLayer);
 	pushLayer(sceneLayer);
 }

@@ -17,7 +17,7 @@ public:
 	~Shader();
 
 	void use();
-	void setMat4(glm::mat4& value,const std::string& name);
+	void setMat4(const glm::mat4& value,const std::string& name);
 	void setVec3(glm::vec3& value, const std::string& name);
 	void setArrayVec3(std::vector<glm::vec3>& value, const std::string& name);
 	void setArrayMat4(std::vector<glm::mat4>& value, const std::string& name);

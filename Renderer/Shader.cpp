@@ -59,7 +59,7 @@ void Shader::use()
 	glUseProgram(id);
 }
 
-void Shader::setMat4(glm::mat4& value, const std::string& name)
+void Shader::setMat4(const glm::mat4& value, const std::string& name)
 {
 	unsigned int loc = glGetUniformLocation(id, name.c_str());
 	if (loc == -1) std::cout << "There's nothing called " << name << std::endl;
